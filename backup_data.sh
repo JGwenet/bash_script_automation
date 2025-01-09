@@ -1,9 +1,17 @@
 #!/bin/bash
 
-# Directories to back up
-SOURCE_DIRS=("/path/to/important/data1" "/path/to/important/data2")
+# Check if the correct number of arguments is provided
+if [ "$#" -lt 2 ]; then
+    echo "Usage: $0 BACKUP_DIR SOURCE_DIR1 [SOURCE_DIR2 ...]"
+    exit 1
+fi
+
 # Backup destination
-BACKUP_DIR="/path/to/backup/location"
+BACKUP_DIR="$1"
+shift
+
+# Directories to back up
+SOURCE_DIRS=("$@")
 
 # Create backup directory if it doesn't exist
 mkdir -p "$BACKUP_DIR"
