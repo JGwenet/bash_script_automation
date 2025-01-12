@@ -16,10 +16,9 @@ This project contains a set of Bash scripts designed to automate common administ
 
 ## Usage
 
-To use the scripts, navigate to the `scripts` directory and execute the desired script. For example:
+To use the scripts, run:
 
 ```bash
-cd scripts
 ./cleanup_logs.sh
 ```
 
